@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p style="color:red">{{message}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <a href="/paintings">Dashboard</a>
+    <a href="/logout">Logout</a>
+    <div>
+        <h1>Add A Painting</h1>
+        <form action="/create_painting" method="POST">
+            
+            <div>
+                <label for="title">Title:</label>
+                <input type="text" name="title">
+            </div>
+            
+            <div>
+                <label for="description">Description:</label>
+                <textarea name="description"></textarea>
+            </div>
+            
+            <div>
+                <label for="price">Price:</label>
+                <input type="number" name="price">
+            </div>
+            
+            <input type="submit" value="Create Painting">
+        
+        </form>
+    </div>
+</body>
+</html>

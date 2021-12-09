@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/paintings/new">Add a Painting</a>
+    <a href="/paintings">Dashboard</a>
+    <a href="/logout">Logout</a>
+    <div>
+        <h1>{{painting.title}}</h1>
+        <h2>Painted By: {{painting.user.first_name}} {{painting.user.last_name}}</h2>
+        <h2>Description: {{painting.description}}</h2>
+        <h2>Price: {{painting.price}}</h2>
+    </div>
+</body>
+</html>
